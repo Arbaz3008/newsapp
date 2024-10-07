@@ -35,4 +35,35 @@
   to {
     transform: rotate(360deg);
   }
+  
 }
+.pulse-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.double-ring-loader {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.double-ring-loader:after {
+  content: " ";
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #db349b;
+  border-color: #34db6c7a transparent #dbae34 transparent;
+  animation: double-ring-loader 1.2s linear infinite;
+}
+@keyframes double-ring-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
